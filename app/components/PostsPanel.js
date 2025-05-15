@@ -31,7 +31,7 @@ export default function PostsPanel({ onClose }) {
   const paginatedPosts = posts.slice((page - 1) * POSTS_PER_PAGE, page * POSTS_PER_PAGE);
 
   return (
-    <div className="rounded-lg bg-white border border-gray-200 flex flex-col transition-all duration-300 p-4 w-full max-w-3xl w-[700px] mx-auto">
+    <div className="rounded-lg bg-white border border-gray-200 flex flex-col transition-all duration-300 p-4 w-full max-w-2xl w-[600px] mx-auto">
       <div className="flex justify-between items-center p-4 border-b">
         <h2 className="text-2xl font-bold">Posts</h2>
         <button onClick={onClose} className="text-xl font-bold px-3 py-1 rounded hover:bg-gray-200">×</button>

@@ -33,7 +33,7 @@ export default function UserPanel({ onClose }) {
   const paginatedUsers = users.slice((page - 1) * USERS_PER_PAGE, page * USERS_PER_PAGE);
 
   return (
-    <div className="rounded-lg bg-white border border-gray-200 flex flex-col transition-all duration-300 p-4 w-full max-w-3xl w-[700px] mx-auto">
+    <div className="rounded-lg bg-white border border-gray-200 flex flex-col transition-all duration-300 p-4 w-full max-w-3xl w-[900px] mx-auto">
       <div className="flex justify-between items-center p-4 border-b">
         <h2 className="text-2xl font-bold">Users</h2>
         <button onClick={onClose} className="text-xl font-bold px-3 py-1 rounded hover:bg-gray-200">×</button>

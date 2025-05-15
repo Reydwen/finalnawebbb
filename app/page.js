@@ -51,24 +51,25 @@ export default function Home() {
         </div>
         {/* Right side: Content area */}
         <div className="flex-1 flex items-center justify-center">
-          {selected && selected !== "Users" && selected !== "Posts" && (
+          {selected && selected !== "Users" && selected !== "Posts" && selected !== "Charts" && (
             <div className="w-full h-[400px] bg-[#6B613A] rounded-lg transition-all flex items-center justify-center">
               <span className="text-white text-2xl font-bold">{selected} Content</span>
             </div>
           )}
         </div>
+        {/* Overlay Panels on the right side inside the card */}
         {showUserPanel && (
-          <div className="ml-16">
+          <div className="absolute right-20 top-1/2 -translate-y-1/2 z-50">
             <UserPanel onClose={() => setShowUserPanel(false)} />
           </div>
         )}
         {showPostsPanel && (
-          <div className="ml-16">
+          <div className="absolute right-20 top-1/2 -translate-y-1/2 z-50">
             <PostsPanel onClose={() => setShowPostsPanel(false)} />
           </div>
         )}
         {showChartsPanel && (
-          <div className="ml-16">
+          <div className="absolute right-20 top-1/2 -translate-y-1/2 z-50">
             <ChartsPanel onClose={() => setShowChartsPanel(false)} />
           </div>
         )}
